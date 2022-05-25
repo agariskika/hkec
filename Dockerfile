@@ -14,8 +14,8 @@ COPY --chown=www-data:www-data . /var/www/html/
 
 RUN chown -R www-data:www-data /var/www/html
 
+RUN chmod -R 777 storage
+
 RUN composer install
 
 RUN yarn install
-
-EXPOSE 8080
